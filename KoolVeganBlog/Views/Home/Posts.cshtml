@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Post>
+@{
+    ViewBag.Title = "Posts";
+}
+
+<h2>Posts</h2>
+
+
+<div>
+    <ul>
+        @foreach (var post in Model)
+        {
+            <li>
+                <a asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">
+                    @post.Title
+                </a>
+            </li>
+        }
+    </ul>
+</div>
+
