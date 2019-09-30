@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
@@ -9,6 +9,7 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+    <PackageReference Include="PhotoSauce.MagicScaler" Version="0.9.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,12 +20,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\content\blog\" />
+    <Content Update="wwwroot/content/blog/*.*" CopytoPublishDirectory="Never" />
+    <Content Update="wwwroot/lib/**/*.*" CopytoPublishDirectory="Never" />
+    <Content Update="wwwroot/lib/**/dist/**/*.*" CopytoPublishDirectory="Always" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="wwwroot\lib\Trumbowyg-master\.github\FUNDING.yml" />
     <None Include="wwwroot\lib\Trumbowyg-master\.github\ISSUE_TEMPLATE.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\content\blog\" />
   </ItemGroup>
 
 </Project>

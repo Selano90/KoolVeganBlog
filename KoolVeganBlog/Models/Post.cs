@@ -13,20 +13,23 @@ namespace KoolVeganBlog.Models
         public DateTime Created { get; set; }
         public DateTime LastModified { get; set; }
         public Category Category { get; set; }
-        public Author Author { get; set; }
-        public List<Tag> Tags { get; set; }
+        //public Author Author { get; set; }
+        //public List<Tag> Tags { get; set; }
+        public string Tags { get; set; }
         public bool Published { get; set; }
         public string Image { get; set; }
+        public string Description { get; set; }
+        public List<MainComment> MainComments { get; set; }
     }
 
     public enum Category
     {
-        Food = 1,
+        Veganism = 1,
         Animals,
         Planet,
-        Recipe,
-        Interview,
-        Veganism
+        Recipes,
+        Media,
+        Events
 
     }
 }

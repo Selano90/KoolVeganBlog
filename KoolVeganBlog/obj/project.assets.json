@@ -2785,6 +2785,18 @@
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
         }
       },
+      "PhotoSauce.MagicScaler/0.9.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/PhotoSauce.MagicScaler.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/PhotoSauce.MagicScaler.dll": {}
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -7711,6 +7723,38 @@
         "nuget.frameworks.nuspec"
       ]
     },
+    "PhotoSauce.MagicScaler/0.9.1": {
+      "sha512": "qpwsQxMFCS0eFuzEVdvJwnXTPLppZWeeAFpNsrVxbVNX5jxHGlgesNYldJw0FlEgmT34QMEtHc+adiYrOcdmTA==",
+      "type": "package",
+      "path": "photosauce.magicscaler/0.9.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net46/PhotoSauce.MagicScaler.dll",
+        "lib/net46/PhotoSauce.MagicScaler.pdb",
+        "lib/net46/PhotoSauce.MagicScaler.xml",
+        "lib/net472/PhotoSauce.MagicScaler.dll",
+        "lib/net472/PhotoSauce.MagicScaler.pdb",
+        "lib/net472/PhotoSauce.MagicScaler.xml",
+        "lib/netcoreapp1.0/PhotoSauce.MagicScaler.dll",
+        "lib/netcoreapp1.0/PhotoSauce.MagicScaler.pdb",
+        "lib/netcoreapp1.0/PhotoSauce.MagicScaler.xml",
+        "lib/netcoreapp2.0/PhotoSauce.MagicScaler.dll",
+        "lib/netcoreapp2.0/PhotoSauce.MagicScaler.pdb",
+        "lib/netcoreapp2.0/PhotoSauce.MagicScaler.xml",
+        "lib/netcoreapp2.1/PhotoSauce.MagicScaler.dll",
+        "lib/netcoreapp2.1/PhotoSauce.MagicScaler.pdb",
+        "lib/netcoreapp2.1/PhotoSauce.MagicScaler.xml",
+        "lib/netstandard1.3/PhotoSauce.MagicScaler.dll",
+        "lib/netstandard1.3/PhotoSauce.MagicScaler.pdb",
+        "lib/netstandard1.3/PhotoSauce.MagicScaler.xml",
+        "lib/netstandard2.0/PhotoSauce.MagicScaler.dll",
+        "lib/netstandard2.0/PhotoSauce.MagicScaler.pdb",
+        "lib/netstandard2.0/PhotoSauce.MagicScaler.xml",
+        "photosauce.magicscaler.0.9.1.nupkg.sha512",
+        "photosauce.magicscaler.nuspec"
+      ]
+    },
     "Remotion.Linq/2.2.0": {
       "sha512": "fK/76UmpC0FXBlGDFVPLJHQlDLYnGC+XY3eoDgCgbtrhi0vzbXDQ3n/IYHhqSKqXQfGw/u04A1drWs7rFVkRjw==",
       "type": "package",
@@ -12531,7 +12575,8 @@
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.9"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.9",
+      "PhotoSauce.MagicScaler >= 0.9.1"
     ]
   },
   "packageFolders": {
@@ -12594,6 +12639,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[2.1.9, )"
+          },
+          "PhotoSauce.MagicScaler": {
+            "target": "Package",
+            "version": "[0.9.1, )"
           }
         },
         "imports": [

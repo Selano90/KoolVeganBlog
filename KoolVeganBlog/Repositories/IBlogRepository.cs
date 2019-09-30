@@ -7,6 +7,7 @@ namespace KoolVeganBlog.Repositories
     public interface IBlogRepository
     {
         List<Post> GetPosts();
+        List<Post> GetPosts(string Category);
         Post GetPost(int id);
         void AddPost(Post post);
         void UpdatePostContent(Post post);
@@ -16,5 +17,6 @@ namespace KoolVeganBlog.Repositories
 
         Task<bool> SaveChangesAsync();
         void UpdatePostCategory(Post post);
+        void AddSubComment(SubComment comment);
     }
 }

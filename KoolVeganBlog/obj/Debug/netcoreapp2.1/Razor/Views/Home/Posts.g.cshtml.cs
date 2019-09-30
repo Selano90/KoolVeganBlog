@@ -75,7 +75,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("            <li>\r\n                ");
             EndContext();
             BeginContext(185, 122, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6193ee032ce449fd9baa1fce631d14ac", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e3225545d205415bb23f36a7e715da3a", async() => {
                 BeginContext(252, 22, true);
                 WriteLiteral("\r\n                    ");
                 EndContext();

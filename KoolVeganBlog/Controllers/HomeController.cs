@@ -1,8 +1,12 @@
 ﻿using KoolVeganBlog.Data.FileManager;
 using KoolVeganBlog.Models;
 using KoolVeganBlog.Repositories;
+using KoolVeganBlog.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace KoolVeganBlog.Controllers
 {
@@ -19,7 +23,8 @@ namespace KoolVeganBlog.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var posts = _repo.GetPosts();
+            return View(posts);
         }
 
         public IActionResult About()
@@ -55,18 +60,53 @@ namespace KoolVeganBlog.Controllers
             return View(post);
         }
 
-        public ActionResult Posts()
+        public ActionResult Posts(string category)
         {
             ViewBag.Message = "Wanna read our posts ?";
-            var posts = _repo.GetPosts();
+            var posts = string.IsNullOrEmpty(category) ? _repo.GetPosts() : _repo.GetPosts(category);
             return View(posts);
         }
 
         [HttpGet("/Image/{image}")]
+        [ResponseCache(CacheProfileName = "Monthly")]
         public IActionResult Image(string image)
         {
             var mime = image.Substring(image.LastIndexOf('.') + 1);
             return new FileStreamResult(_fileManager.ImageStream(image), $"image/{mime}");
+        }
+        [HttpPost]
+        public async Task<IActionResult> Comment(CommentViewModel cvm)
+        {
+            if (!ModelState.IsValid)
+                return RedirectToAction("Post", new { id = cvm.PostId });
+
+            var post = _repo.GetPost(cvm.PostId);
+            if (cvm.MainCommentId == 0)
+            {
+                post.MainComments = post.MainComments ?? new List<MainComment>();
+                post.MainComments.Add(new MainComment
+                {
+                    Message = cvm.Message,
+                    Created = DateTime.Now,
+                });
+
+                _repo.UpdatePost(post);
+
+            }
+            else
+            {
+                var comment = new SubComment
+                {
+                    MainCommentId = cvm.MainCommentId,
+                    Message = cvm.Message,
+                    Created = DateTime.Now,
+                };
+                _repo.AddSubComment(comment);
+            }
+
+            await _repo.SaveChangesAsync();
+
+            return RedirectToAction("Post", new { id = cvm.PostId });
         }
 
     }

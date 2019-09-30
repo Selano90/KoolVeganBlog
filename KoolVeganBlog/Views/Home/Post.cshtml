@@ -1,6 +1,8 @@
 ﻿@model Post
 @{
-    ViewBag.Title = "Post";
+    ViewBag.Title = Model.Title;
+    ViewBag.Description = Model.Description;
+    ViewBag.Keywords = $"{Model.Tags?.Replace(",", "")} {Model.Category}";
 }
 
 <h2>@Model.Title</h2>
@@ -13,5 +15,42 @@
 <div class="post-body">
     @Html.Raw(Model.Body)
 </div>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="comment-section">
+        @{
+            await Html.RenderPartialAsync("_MainComment", new CommentViewModel { PostId = Model.Id, MainCommentId = 0 });
+        }
+        @foreach (var c in Model.MainComments)
+        {
+            <p>
+                @c.Message --- @c.Created
+            </p>
+            <div style="margin-left: 20px;">
+
+                @foreach (var sc in c.SubComments)
+                {
+                    <p>
+                        @sc.Message --- @sc.Created
+                    </p>
+                }
+                @{
+                    await Html.RenderPartialAsync("_MainComment", new CommentViewModel { PostId = Model.Id, MainCommentId = c.Id });
+                }
+
+
+            </div>
+        }
+    </div>
+}
+else
+{
+    <div>
+        <a asp-area="Identity" asp-page="/Account/Login">Sign In</a> to comment on this post!
+    </div>
+}
+
+
 
 

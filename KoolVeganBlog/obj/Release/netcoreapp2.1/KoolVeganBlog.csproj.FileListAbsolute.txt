@@ -9,7 +9,6 @@ C:\Users\sbenh\source\repos\KoolVeganBlog\KoolVeganBlog\obj\Release\netcoreapp2.
 C:\Users\sbenh\source\repos\KoolVeganBlog\KoolVeganBlog\obj\Release\netcoreapp2.1\KoolVeganBlog.csproj.CoreCompileInputs.cache
 C:\Users\sbenh\source\repos\KoolVeganBlog\KoolVeganBlog\obj\Release\netcoreapp2.1\KoolVeganBlog.RazorAssemblyInfo.cache
 C:\Users\sbenh\source\repos\KoolVeganBlog\KoolVeganBlog\obj\Release\netcoreapp2.1\KoolVeganBlog.RazorAssemblyInfo.cs
-C:\Users\sbenh\source\repos\KoolVeganBlog\KoolVeganBlog\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\sbenh\source\repos\KoolVeganBlog\KoolVeganBlog\obj\Release\netcoreapp2.1\KoolVeganBlog.AssemblyInfoInputs.cache
 C:\Users\sbenh\source\repos\KoolVeganBlog\KoolVeganBlog\obj\Release\netcoreapp2.1\KoolVeganBlog.AssemblyInfo.cs
 C:\Users\sbenh\source\repos\KoolVeganBlog\KoolVeganBlog\obj\Release\netcoreapp2.1\KoolVeganBlog.TagHelpers.input.cache
@@ -37,3 +36,5 @@ C:\Users\sbenh\source\repos\KoolVeganBlog\KoolVeganBlog\obj\Release\netcoreapp2.
 C:\Users\sbenh\source\repos\KoolVeganBlog\KoolVeganBlog\obj\Release\netcoreapp2.1\Razor\Views\Home\Posts.g.cshtml.cs
 C:\Users\sbenh\source\repos\KoolVeganBlog\KoolVeganBlog\obj\Release\netcoreapp2.1\Razor\Views\Panel\Index.g.cshtml.cs
 C:\Users\sbenh\source\repos\KoolVeganBlog\KoolVeganBlog\obj\Release\netcoreapp2.1\Razor\Views\Panel\Edit.g.cshtml.cs
+C:\Users\sbenh\source\repos\KoolVeganBlog\KoolVeganBlog\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\sbenh\source\repos\KoolVeganBlog\KoolVeganBlog\obj\Release\netcoreapp2.1\Razor\Views\Home\_MainComment.g.cshtml.cs

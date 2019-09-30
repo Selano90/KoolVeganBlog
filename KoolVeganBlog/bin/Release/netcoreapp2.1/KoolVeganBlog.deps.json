@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "3d650778e3500094e38cb51398f5ded5c197beae"
+    "signature": "368cfc06d4d65370e3c980bf5af2d8d4e5909210"
   },
   "compilationOptions": {
     "defines": [
@@ -27,7 +27,8 @@
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.9"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.9",
+          "PhotoSauce.MagicScaler": "0.9.1"
         },
         "runtime": {
           "KoolVeganBlog.dll": {}
@@ -375,6 +376,20 @@
         },
         "compile": {
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
+        }
+      },
+      "PhotoSauce.MagicScaler/0.9.1": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/PhotoSauce.MagicScaler.dll": {
+            "assemblyVersion": "0.9.1.0",
+            "fileVersion": "0.9.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.1/PhotoSauce.MagicScaler.dll": {}
         }
       },
       "System.Composition/1.0.31": {
@@ -3594,6 +3609,13 @@
       "sha512": "sha512-qbXaB76XYUVLocLBs8Z9TS/ERGK2wm797feO+0JEPFvT7o7MRadOR77mqaSD4J1k8G+DlZQyq+MlkCuxrkr3ag==",
       "path": "nuget.frameworks/4.7.0",
       "hashPath": "nuget.frameworks.4.7.0.nupkg.sha512"
+    },
+    "PhotoSauce.MagicScaler/0.9.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qpwsQxMFCS0eFuzEVdvJwnXTPLppZWeeAFpNsrVxbVNX5jxHGlgesNYldJw0FlEgmT34QMEtHc+adiYrOcdmTA==",
+      "path": "photosauce.magicscaler/0.9.1",
+      "hashPath": "photosauce.magicscaler.0.9.1.nupkg.sha512"
     },
     "System.Composition/1.0.31": {
       "type": "package",

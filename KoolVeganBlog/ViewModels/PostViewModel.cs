@@ -1,7 +1,6 @@
 ﻿using KoolVeganBlog.Models;
 using Microsoft.AspNetCore.Http;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace KoolVeganBlog.ViewModels
@@ -17,8 +16,9 @@ namespace KoolVeganBlog.ViewModels
         public DateTime LastModified { get; set; }
         public Category Category { get; set; }
         public Author Author { get; set; }
-        public List<Tag> Tags { get; set; }
+        public string Tags { get; set; }
         public bool Published { get; set; }
         public IFormFile Image { get; set; }
+        public string Description { get; set; }
     }
 }

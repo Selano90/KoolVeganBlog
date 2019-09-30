@@ -34,25 +34,23 @@ namespace KoolVeganBlog.Data.Migrations
                     b.ToTable("Authors");
                 });
 
-            modelBuilder.Entity("KoolVeganBlog.Models.Comment", b =>
+            modelBuilder.Entity("KoolVeganBlog.Models.MainComment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("AuthorId");
+                    b.Property<DateTime>("Created");
+
+                    b.Property<string>("Message");
 
                     b.Property<int?>("PostId");
 
-                    b.Property<string>("Text");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("AuthorId");
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("MainComments");
                 });
 
             modelBuilder.Entity("KoolVeganBlog.Models.Post", b =>
@@ -61,13 +59,13 @@ namespace KoolVeganBlog.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("AuthorId");
-
                     b.Property<string>("Body");
 
                     b.Property<int>("Category");
 
                     b.Property<DateTime>("Created");
+
+                    b.Property<string>("Description");
 
                     b.Property<string>("Image");
 
@@ -75,13 +73,32 @@ namespace KoolVeganBlog.Data.Migrations
 
                     b.Property<bool>("Published");
 
+                    b.Property<string>("Tags");
+
                     b.Property<string>("Title");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AuthorId");
-
                     b.ToTable("Posts");
+                });
+
+            modelBuilder.Entity("KoolVeganBlog.Models.SubComment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Created");
+
+                    b.Property<int>("MainCommentId");
+
+                    b.Property<string>("Message");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MainCommentId");
+
+                    b.ToTable("SubComment");
                 });
 
             modelBuilder.Entity("KoolVeganBlog.Models.Tag", b =>
@@ -94,11 +111,7 @@ namespace KoolVeganBlog.Data.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<int?>("PostId");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("PostId");
 
                     b.ToTable("Tags");
                 });
@@ -264,29 +277,19 @@ namespace KoolVeganBlog.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("KoolVeganBlog.Models.Comment", b =>
-                {
-                    b.HasOne("KoolVeganBlog.Models.Author", "Author")
-                        .WithMany()
-                        .HasForeignKey("AuthorId");
-
-                    b.HasOne("KoolVeganBlog.Models.Post", "Post")
-                        .WithMany()
-                        .HasForeignKey("PostId");
-                });
-
-            modelBuilder.Entity("KoolVeganBlog.Models.Post", b =>
-                {
-                    b.HasOne("KoolVeganBlog.Models.Author", "Author")
-                        .WithMany()
-                        .HasForeignKey("AuthorId");
-                });
-
-            modelBuilder.Entity("KoolVeganBlog.Models.Tag", b =>
+            modelBuilder.Entity("KoolVeganBlog.Models.MainComment", b =>
                 {
                     b.HasOne("KoolVeganBlog.Models.Post")
-                        .WithMany("Tags")
+                        .WithMany("MainComments")
                         .HasForeignKey("PostId");
+                });
+
+            modelBuilder.Entity("KoolVeganBlog.Models.SubComment", b =>
+                {
+                    b.HasOne("KoolVeganBlog.Models.MainComment")
+                        .WithMany("SubComments")
+                        .HasForeignKey("MainCommentId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

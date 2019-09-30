@@ -1,5 +1,6 @@
 ﻿using KoolVeganBlog.Data;
 using KoolVeganBlog.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,16 @@ namespace KoolVeganBlog.Repositories
         }
 
         public List<Post> GetPosts() => _blogContext.Posts.ToList();
+        //public List<Post> GetPosts(string Category) => _blogContext.Posts
+        //    .Where(post => post.Category.ToString().ToLower().Equals(Category.ToLower()))
+        //    .ToList();
+
+        public List<Post> GetPosts(string Category)
+        {
+            Func<Post, bool> InCategory = (post) => { return post.Category.ToString().ToLower().Equals(Category.ToLower()); };
+
+            return _blogContext.Posts.Where(post => InCategory(post)).ToList();
+        }
 
         public void AddPost(Post post)
         {
@@ -27,7 +38,8 @@ namespace KoolVeganBlog.Repositories
             _blogContext.Posts.Add(post);
         }
 
-        public Post GetPost(int id) => _blogContext.Posts.FirstOrDefault(p => p.Id == id);
+        public Post GetPost(int id) => _blogContext.Posts.Include(p => p.MainComments)
+            .ThenInclude(mc => mc.SubComments).FirstOrDefault(p => p.Id == id);
 
 
         public void RemovePost(int id) => _blogContext.Posts.Remove(GetPost(id));
@@ -71,7 +83,11 @@ namespace KoolVeganBlog.Repositories
                 result.Title = post.Title;
                 result.Body = post.Body;
                 result.Category = post.Category;
+                result.Description = post.Description;
+                result.Tags = post.Tags;
                 result.LastModified = DateTime.UtcNow;
+                result.Image = post.Image;
+                result.MainComments = post.MainComments;
             }
             //_blogContext.Update(post);
         }
@@ -84,6 +100,11 @@ namespace KoolVeganBlog.Repositories
                 return true;
             }
             return false;
+        }
+
+        public void AddSubComment(SubComment comment)
+        {
+            _blogContext.SubComment.Add(comment);
         }
     }
 }

@@ -53,10 +53,11 @@ namespace KoolVeganBlog.Controllers
                     Created = post.Created,
                     LastModified = post.LastModified,
                     Category = post.Category,
-                    Author = post.Author,
+                    //Author = post.Author,
                     Tags = post.Tags,
                     Published = post.Published,
-                    CurrentImage = post.Image
+                    CurrentImage = post.Image,
+                    Description = post.Description
 
                 });
             }
@@ -75,16 +76,21 @@ namespace KoolVeganBlog.Controllers
                 Body = postvm.Body,
                 LastModified = DateTime.Now,
                 Category = postvm.Category,
-                Author = postvm.Author,
+                //Author = postvm.Author,
                 Tags = postvm.Tags,
-                Published = postvm.Published
+                Published = postvm.Published,
+                Description = postvm.Description
             };
 
             if (postvm.Image == null)
                 post.Image = postvm.CurrentImage;
             else
+            {
+                if (!string.IsNullOrEmpty(postvm.CurrentImage))
+                    _fileManager.RemoveImage(postvm.CurrentImage);
                 post.Image = await _fileManager.SaveImage(postvm.Image);
 
+            }
             if (post.Id > 0)
             {
                 _repo.UpdatePost(post);

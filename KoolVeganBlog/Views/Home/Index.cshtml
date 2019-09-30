@@ -1,5 +1,8 @@
-﻿@{
+﻿@model IEnumerable<Post>
+@{
     ViewData["Title"] = "Home Page";
+    ViewBag.Description = "Save the planet be VEGAN!";
+    ViewBag.Keywords = "Food Animals Planet Recipe Interview Veganism";
 }
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
@@ -14,7 +17,7 @@
             <div class="carousel-caption" role="option">
                 <p style="color:darkgreen">
                     Learn how to be vegan.
-                    <a class="btn btn-default" href="">
+                    <a asp-controller="Home" asp-action="Posts" asp-route-category="Veganism" class="btn btn-default">
                         Learn More
                     </a>
                 </p>
@@ -25,7 +28,7 @@
             <div class="carousel-caption" role="option">
                 <p style="color:darkgreen">
                     There is powerful impact on the planet, Wanna know how?
-                    <a class="btn btn-default" href="">
+                    <a asp-controller="Home" asp-action="Posts" asp-route-category="Planet" class="btn btn-default">
                         Learn More
                     </a>
                 </p>
@@ -35,8 +38,8 @@
             <img src="~/content/static/KoolVegan3.png" alt="Microsoft Azure" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p style="color:darkgreen">
-                    Learn how Veganism benefits all beings.
-                    <a class="btn btn-default" href="">
+                    What to eat when you are vegan.
+                    <a asp-controller="Home" asp-action="Posts" asp-route-category="Recipes" class="btn btn-default">
                         Learn More
                     </a>
                 </p>
@@ -55,40 +58,122 @@
 
 <div class="row">
     <div class="col-md-3">
+
         <h2>Animals rights</h2>
         <ul>
-            <li>See for yourself how are they really treated</li>
-            <li>Read about <a href="">Animal rights</a></li>
+            @foreach (var post in Model)
+            {
+                @if (post.Category.ToString() == "Animals")
+                {
+                    <li>
+                        <a asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">
+                            @post.Title
+                        </a>
+                    </li>
+                }
+            }
+            <li><a asp-controller="Home" asp-action="Posts" asp-route-category="Animals">See more...</a></li>
         </ul>
     </div>
     <div class="col-md-3">
+
         <h2>Impact on the planet</h2>
+
+
         <ul>
-            <li><a href="">There is no planet B</a></li>
-            <li><a href="">Global warming.</a></li>
-            <li><a href="">Deforestation.</a></li>
-            <li><a href="">Organizations.</a></li>
-            <li><a href="">Events and strikes.</a></li>
+            @foreach (var post in Model)
+            {
+                @if (post.Category.ToString() == "Planet")
+                {
+                    <li>
+                        <a asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">
+                            @post.Title
+                        </a>
+                    </li>
+                }
+            }
+            <li><a asp-controller="Home" asp-action="Posts" asp-route-category="Planet">See more...</a></li>
         </ul>
     </div>
     <div class="col-md-3">
+
         <h2>Vegan Recipes</h2>
+
         <ul>
-            <li><a href="">Vegetables</a></li>
-            <li><a href="">Fruits.</a></li>
-            <li><a href="">Seeds</a></li>
-            <li><a href="">Beans</a></li>
-            <li><a href="">Nuts</a></li>
-            <li><a href="">Soja</a></li>
-            <li><a href="">Oats</a></li>
+
+            @foreach (var post in Model)
+            {
+                @if (post.Category.ToString() == "Recipes")
+                {
+                    <li>
+                        <a asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">
+                            @post.Title
+                        </a>
+                    </li>
+                }
+            }
+            <li><a asp-controller="Home" asp-action="Posts" asp-route-category="Recipes">See more...</a></li>
         </ul>
     </div>
     <div class="col-md-3">
-        <h2>Run &amp; Challenges & fun</h2>
+
+        <h2>Interview, Shows & videos</h2>
+
         <ul>
-            <li><a href="">21 days challenge</a></li>
-            <li><a href="">Vegan, Healthy and Happy!</a></li>
-            <li><a href="">Social network</a></li>
+            @foreach (var post in Model)
+            {
+                @if (post.Category.ToString() == "Media")
+                {
+                    <li>
+                        <a asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">
+                            @post.Title
+                        </a>
+                    </li>
+                }
+            }
+            <li><a asp-controller="Home" asp-action="Posts" asp-route-category="Media">See more...</a></li>
         </ul>
     </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+
+        <h2>Events</h2>
+        <ul>
+            @foreach (var post in Model)
+            {
+                @if (post.Category.ToString() == "Events")
+                {
+                    <li>
+                        <a asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">
+                            @post.Title
+                        </a>
+                    </li>
+                }
+            }
+            <li><a asp-controller="Home" asp-action="Posts" asp-route-category="Events">See more...</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+
+        <h2>Veganism</h2>
+
+
+        <ul>
+            @foreach (var post in Model)
+            {
+                @if (post.Category.ToString() == "Veganism")
+                {
+                    <li>
+                        <a asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">
+                            @post.Title
+                        </a>
+                    </li>
+                }
+            }
+            <li><a asp-controller="Home" asp-action="Posts" asp-route-category="Veganism">See more...</a></li>
+        </ul>
+    </div>
+
 </div>

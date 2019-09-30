@@ -4,8 +4,11 @@
 }
 
 <h2>Admin Panel</h2>
-
-
+<a asp-controller="Panel" asp-action="Edit">
+    Add a new post
+</a>
+<br />
+<br />
 <div>
     <ul>
         @foreach (var post in Model)
