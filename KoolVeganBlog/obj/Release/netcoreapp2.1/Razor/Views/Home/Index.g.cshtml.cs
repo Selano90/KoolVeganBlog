@@ -93,7 +93,7 @@ using KoolVeganBlog.ViewModels;
             ");
             EndContext();
             BeginContext(639, 82, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7fdadc4b98484ea9a4a9b99ac26de7f5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3f247f5d18c24abf98f4956b29797b02", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -113,7 +113,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("\r\n            <div class=\"carousel-caption\" role=\"option\">\r\n                <p style=\"color:darkgreen\">\r\n                    Learn how to be vegan.\r\n                    ");
             EndContext();
             BeginContext(890, 160, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d70b13f92c8945f8a148fa5b63de8da1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d4ae22959ecb43398c89d9e4428b3dc1", async() => {
                 BeginContext(988, 58, true);
                 WriteLiteral("\r\n                        Learn More\r\n                    ");
                 EndContext();
@@ -144,7 +144,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("\r\n                </p>\r\n            </div>\r\n        </div>\r\n        <div class=\"item\">\r\n            ");
             EndContext();
             BeginContext(1150, 88, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "66226b0d5e65434db780618b1db21052", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4ead8c1d094b46229459a720354d9c7a", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -164,7 +164,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("\r\n            <div class=\"carousel-caption\" role=\"option\">\r\n                <p style=\"color:darkgreen\">\r\n                    There is powerful impact on the planet, Wanna know how?\r\n                    ");
             EndContext();
             BeginContext(1440, 158, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a28f0f4395ee45b1aaafe1be69ad9597", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2d883e5526b478ead53c869c43a504d", async() => {
                 BeginContext(1536, 58, true);
                 WriteLiteral("\r\n                        Learn More\r\n                    ");
                 EndContext();
@@ -195,7 +195,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("\r\n                </p>\r\n            </div>\r\n        </div>\r\n        <div class=\"item\">\r\n            ");
             EndContext();
             BeginContext(1698, 90, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a5fc2a53ad374f9481a7588b8cafb371", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "95ae93765d2544279f884aaa3bd7a8c0", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -215,7 +215,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("\r\n            <div class=\"carousel-caption\" role=\"option\">\r\n                <p style=\"color:darkgreen\">\r\n                    What to eat when you are vegan.\r\n                    ");
             EndContext();
             BeginContext(1966, 159, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2c129c7b95cd436ab092ee3d65b98128", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7a65048e3abf4c3f8fe357f9f9544f08", async() => {
                 BeginContext(2063, 58, true);
                 WriteLiteral("\r\n                        Learn More\r\n                    ");
                 EndContext();
@@ -282,7 +282,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("                    <li>\r\n                        ");
             EndContext();
             BeginContext(2948, 138, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "39ba4432d3544ce0894474fdcae4e1ea", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2a83799c8d414f41af9f9861ed44eef3", async() => {
                 BeginContext(3015, 30, true);
                 WriteLiteral("\r\n                            ");
                 EndContext();
@@ -343,7 +343,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("            <li>");
             EndContext();
             BeginContext(3165, 88, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "14521d1fdf1b46ec8bd052ba27c02662", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bd1211a38bef4bcdaf6ace6e57575b66", async() => {
                 BeginContext(3238, 11, true);
                 WriteLiteral("See more...");
                 EndContext();
@@ -389,7 +389,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("                    <li>\r\n                        ");
             EndContext();
             BeginContext(3560, 138, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7c1d84374d1a477ca56de93e76bf50dd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "760e326b11f54ec3ba84f5652dc29746", async() => {
                 BeginContext(3627, 30, true);
                 WriteLiteral("\r\n                            ");
                 EndContext();
@@ -450,7 +450,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("            <li>");
             EndContext();
             BeginContext(3777, 87, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8382eae866344ee89094a795481996d8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1870c16f5a824564a5eb8c9e607613eb", async() => {
                 BeginContext(3849, 11, true);
                 WriteLiteral("See more...");
                 EndContext();
@@ -496,7 +496,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("                    <li>\r\n                        ");
             EndContext();
             BeginContext(4165, 138, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eb2ded90203f41d797276c2782a43c42", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2373cd7461bb45ffa57229c6fd2906f2", async() => {
                 BeginContext(4232, 30, true);
                 WriteLiteral("\r\n                            ");
                 EndContext();
@@ -557,7 +557,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("            <li>");
             EndContext();
             BeginContext(4382, 88, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e762d6c0b93c4e2c895e82d9f05ad784", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7087193e26414b19b0701971e0f24e5f", async() => {
                 BeginContext(4455, 11, true);
                 WriteLiteral("See more...");
                 EndContext();
@@ -603,7 +603,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("                    <li>\r\n                        ");
             EndContext();
             BeginContext(4779, 138, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "56cd29bff36f4541ae67b77c0972dd50", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "07bc3f36c8dd4b04a3100c9e33b72eb7", async() => {
                 BeginContext(4846, 30, true);
                 WriteLiteral("\r\n                            ");
                 EndContext();
@@ -664,7 +664,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("            <li>");
             EndContext();
             BeginContext(4996, 86, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0415a2087216496292e9df40a75a2ff4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0714e6144dd04dba92c68e0179e0ca84", async() => {
                 BeginContext(5067, 11, true);
                 WriteLiteral("See more...");
                 EndContext();
@@ -710,7 +710,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("                    <li>\r\n                        ");
             EndContext();
             BeginContext(5400, 138, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a1be4fb07785488b85c586c8418c7b40", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1b32822147d2413dbb00f422c1cba5ff", async() => {
                 BeginContext(5467, 30, true);
                 WriteLiteral("\r\n                            ");
                 EndContext();
@@ -771,7 +771,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("            <li>");
             EndContext();
             BeginContext(5617, 87, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "53e2acd31ead474c9254e69bbce6156f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1acaa9881eef40dda35261f18ddabf0b", async() => {
                 BeginContext(5689, 11, true);
                 WriteLiteral("See more...");
                 EndContext();
@@ -817,7 +817,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("                    <li>\r\n                        ");
             EndContext();
             BeginContext(6001, 138, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "53b613b752e54950869aedb8704eaf8f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3e7f9dcb20ca47238c4492e909374dbf", async() => {
                 BeginContext(6068, 30, true);
                 WriteLiteral("\r\n                            ");
                 EndContext();
@@ -878,7 +878,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("            <li>");
             EndContext();
             BeginContext(6218, 89, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7f4fdcfa2c4b438cbdee53b7f023e3cd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0fcd1ebf1704470890c87b0cc906f0af", async() => {
                 BeginContext(6292, 11, true);
                 WriteLiteral("See more...");
                 EndContext();

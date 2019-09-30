@@ -2,48 +2,69 @@
 @{
     ViewBag.Title = "Edit";
 }
-<link href="~/lib/Trumbowyg-master/dist/ui/trumbowyg.min.css" rel="stylesheet" />
-<h2>Create new blog post</h2>
-
+<!-- <link href="~/lib/Trumbowyg-master/dist/ui/trumbowyg.min.css" rel="stylesheet" /> -->
+<h2>New blog post</h2>
+<hr />
 <div>
     <form asp-controller="Panel" asp-action="Edit" method="post" enctype="multipart/form-data">
         <input asp-for="Id" type="hidden" />
-        <div>
-            <label>Title</label>
-            <input asp-for="Title" />
+
+        <div class="form-group">
+            <label asp-for="Title" class="control-label"></label>
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
         </div>
-        <div>
-            <label>Description</label>
-            <input asp-for="Description" />
+        <div class="form-group">
+            <label asp-for="Description" class="control-label"></label>
+            <input asp-for="Description" class="form-control" />
+            <span asp-validation-for="Description" class="text-danger"></span>
         </div>
-        <div>
-            <label>Tags</label>
-            <input asp-for="Tags" />
+        <div class="form-group">
+            <label asp-for="Tags" class="control-label"></label>
+            <input asp-for="Tags" class="form-control" />
+            <span asp-validation-for="Tags" class="text-danger"></span>
         </div>
-        <div>
-            <label>Category</label>
-            <select asp-for="Category" asp-items="Html.GetEnumSelectList<Category>()"></select>
-        </div>
-        <div>
-            <label>Content</label>
-            <textarea id="editor" asp-for="Body">  </textarea>
+
+        <div class="form-group">
+            <label asp-for="Category" class="control-label"></label>
+            <select asp-for="Category" asp-items="Html.GetEnumSelectList<Category>()" class="form-control"></select>
+            <span asp-validation-for="Category" class="text-danger"></span>
 
         </div>
-        <div>
-            <label>Image</label>
-            <input asp-for="CurrentImage" type="hidden" />
+        <div class="form-group">
+            <label asp-for="Body" class="control-label"></label>
+            <textarea asp-for="Body" id="summernote"></textarea>
+            <span asp-validation-for="Body" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
             <input asp-for="Image" />
-
+            <span asp-validation-for="Image"></span>
+            <input asp-for="CurrentImage" type="hidden" />
         </div>
 
         <input type="submit" value="Submit" />
     </form>
 </div>
-
-@section Scripts{
+<!--
+section Scripts{
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="~/lib/Trumbowyg-master/dist/trumbowyg.js"></script>
     <script>
         $('#editor').trumbowyg();
+    </script>
+}-->
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
+
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Post Something....',
+            tabsize: 2,
+            height: 300
+        });
     </script>
 }

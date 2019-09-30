@@ -5,6 +5,9 @@ using KoolVeganBlog.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace KoolVeganBlog.Controllers
@@ -45,6 +48,14 @@ namespace KoolVeganBlog.Controllers
             else
             {
                 var post = _repo.GetPost((int)id);
+                string tags = "";
+
+                foreach (PostTag tg in post.PostTags)
+                {
+                    tags = tags + ", " + tg.Tag.Name;
+                }
+
+
                 return View(new PostViewModel
                 {
                     Title = post.Title,
@@ -54,10 +65,10 @@ namespace KoolVeganBlog.Controllers
                     LastModified = post.LastModified,
                     Category = post.Category,
                     //Author = post.Author,
-                    Tags = post.Tags,
+                    Tags = tags,
                     Published = post.Published,
                     CurrentImage = post.Image,
-                    Description = post.Description
+                    Description = post.Description,
 
                 });
             }
@@ -69,6 +80,7 @@ namespace KoolVeganBlog.Controllers
         {
             ViewBag.Message = "Wanna create a post ?";
 
+
             var post = new Post
             {
                 Title = postvm.Title,
@@ -77,10 +89,18 @@ namespace KoolVeganBlog.Controllers
                 LastModified = DateTime.Now,
                 Category = postvm.Category,
                 //Author = postvm.Author,
-                Tags = postvm.Tags,
+                //Tags = postvm.Tags,
                 Published = postvm.Published,
                 Description = postvm.Description
             };
+
+            List<string> _tags = Regex.Split(postvm.Tags, @"[ ,;]+").ToList();
+
+            foreach (string t in _tags)
+            {
+                var tag = new Tag { Name = t };
+                _repo.AddTag(tag);
+            }
 
             if (postvm.Image == null)
                 post.Image = postvm.CurrentImage;
@@ -94,16 +114,23 @@ namespace KoolVeganBlog.Controllers
             if (post.Id > 0)
             {
                 _repo.UpdatePost(post);
-
             }
             else
             {
                 post.Created = DateTime.Now;
+                foreach (string t in _tags)
+                {
+                    var tag = new Tag { Name = t };
+                    post.PostTags.Add(
+                        new PostTag()
+                        {
+                            TagId = tag.Id
+                        }
+                        );
+                }
                 _repo.AddPost(post);
 
             }
-
-
 
             if (await _repo.SaveChangesAsync())
                 return RedirectToAction("Index");

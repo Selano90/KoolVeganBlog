@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "368cfc06d4d65370e3c980bf5af2d8d4e5909210"
+    "signature": "c1123e42befafbb565bb50ffe9e64ad0deed6bf2"
   },
   "compilationOptions": {
     "defines": [
@@ -28,7 +28,9 @@
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.9",
-          "PhotoSauce.MagicScaler": "0.9.1"
+          "PhotoSauce.MagicScaler": "0.9.1",
+          "PusherServer": "4.2.0",
+          "bootstrap": "4.3.1"
         },
         "runtime": {
           "KoolVeganBlog.dll": {}
@@ -37,6 +39,13 @@
           "KoolVeganBlog.dll": {}
         }
       },
+      "bootstrap/4.3.1": {
+        "dependencies": {
+          "jQuery": "3.0.0",
+          "popper.js": "1.14.0"
+        }
+      },
+      "jQuery/3.0.0": {},
       "Microsoft.AspNetCore.Razor.Design/2.1.2": {},
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
         "dependencies": {
@@ -390,6 +399,21 @@
         },
         "compile": {
           "lib/netcoreapp2.1/PhotoSauce.MagicScaler.dll": {}
+        }
+      },
+      "popper.js/1.14.0": {},
+      "PusherServer/4.2.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netStandard1.6/PusherServer.Core.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netStandard1.6/PusherServer.Core.dll": {}
         }
       },
       "System.Composition/1.0.31": {
@@ -3477,6 +3501,20 @@
       "serviceable": false,
       "sha512": ""
     },
+    "bootstrap/4.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lrVBeG2vmfwsHJuwSzeXz+1hPn/374vXDOAusU50vzljEWcFOFtif3wzIJJqfqQRHs2RnY0xttZ0Zv5JX4BFGg==",
+      "path": "bootstrap/4.3.1",
+      "hashPath": "bootstrap.4.3.1.nupkg.sha512"
+    },
+    "jQuery/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xFfntV19HzCtKdJWOp/XT9PUY3SslokTDDLFJZdBug36j1XVhw1+vPQ/n7Gd5y+jdpesn5B1m1yn1qIUq57jlA==",
+      "path": "jquery/3.0.0",
+      "hashPath": "jquery.3.0.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
       "type": "package",
       "serviceable": true,
@@ -3616,6 +3654,20 @@
       "sha512": "sha512-qpwsQxMFCS0eFuzEVdvJwnXTPLppZWeeAFpNsrVxbVNX5jxHGlgesNYldJw0FlEgmT34QMEtHc+adiYrOcdmTA==",
       "path": "photosauce.magicscaler/0.9.1",
       "hashPath": "photosauce.magicscaler.0.9.1.nupkg.sha512"
+    },
+    "popper.js/1.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SPxZdXknelgQ015wey7GMZvsVdt/SyEmHYORhEp5k/uF9MUk9DPtkn+6dR98fud2hVWJjZm9KKr474+r7WQt+A==",
+      "path": "popper.js/1.14.0",
+      "hashPath": "popper.js.1.14.0.nupkg.sha512"
+    },
+    "PusherServer/4.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IAi5o3WzSDjPp2bDp1lQn16VOsVL6DptbvWpDc3VA6TtXEYoOINn8+2M44ctfGMWnHJ9KHyyPly3DT3QeIH8LQ==",
+      "path": "pusherserver/4.2.0",
+      "hashPath": "pusherserver.4.2.0.nupkg.sha512"
     },
     "System.Composition/1.0.31": {
       "type": "package",

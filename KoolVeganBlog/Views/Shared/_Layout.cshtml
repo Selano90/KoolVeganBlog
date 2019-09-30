@@ -57,8 +57,10 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; 2019 - KoolVegan</p>
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2019 - KoolVegan - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
         </footer>
     </div>
 

@@ -67,7 +67,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("\r\n<h2>Admin Panel</h2>\r\n");
             EndContext();
             BeginContext(93, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be2b40fcc76343f491ab5a3984a6d1b1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec1a0be1c2ac4d30a24330bf14f49d0b", async() => {
                 BeginContext(137, 22, true);
                 WriteLiteral("\r\n    Add a new post\r\n");
                 EndContext();
@@ -110,7 +110,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("\r\n                -\r\n                ");
             EndContext();
             BeginContext(329, 116, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e5baaf4d7f29422980eb3830ac2a9666", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a2bc85d95a8144a98953943ab969d981", async() => {
                 BeginContext(397, 44, true);
                 WriteLiteral("\r\n                    Edit\r\n                ");
                 EndContext();
@@ -147,7 +147,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("\r\n                -\r\n                ");
             EndContext();
             BeginContext(482, 120, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7aa71bbabdb14203a1eb761fa4daa15c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bbe67e0c66c64eacbb1f08216f898281", async() => {
                 BeginContext(552, 46, true);
                 WriteLiteral("\r\n                    Remove\r\n                ");
                 EndContext();

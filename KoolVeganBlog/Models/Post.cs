@@ -6,6 +6,10 @@ namespace KoolVeganBlog.Models
 {
     public class Post
     {
+        public Post()
+        {
+            Created = DateTime.Now;
+        }
         public int Id { get; set; }
         public string Title { get; set; }
         [Display(Name = "Content")]
@@ -14,13 +18,15 @@ namespace KoolVeganBlog.Models
         public DateTime LastModified { get; set; }
         public Category Category { get; set; }
         //public Author Author { get; set; }
-        //public List<Tag> Tags { get; set; }
-        public string Tags { get; set; }
+
+        //public string Tags { get; set; }
         public bool Published { get; set; }
         public string Image { get; set; }
         public string Description { get; set; }
         public List<MainComment> MainComments { get; set; }
+        public List<PostTag> PostTags { get; set; } = new List<PostTag>();
     }
+
 
     public enum Category
     {

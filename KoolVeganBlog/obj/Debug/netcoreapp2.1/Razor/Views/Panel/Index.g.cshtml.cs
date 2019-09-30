@@ -29,7 +29,7 @@ using KoolVeganBlog.ViewModels;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"618a88e9bebc615822717aa6cebee80dfff60336", @"/Views/Panel/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5cdef870eb2886d81d00eee7d1d881cce1499c0a", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"64ecb1cbf2e9c5eed0f160f5e07fbb04b291f4eb", @"/Views/_ViewImports.cshtml")]
     public class Views_Panel_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Post>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Panel", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -67,7 +67,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("\r\n<h2>Admin Panel</h2>\r\n");
             EndContext();
             BeginContext(93, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "77985043889f4698b32073da52fc00d3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f58ee245a8ff4643ba7cfad5570aed73", async() => {
                 BeginContext(137, 22, true);
                 WriteLiteral("\r\n    Add a new post\r\n");
                 EndContext();
@@ -110,7 +110,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("\r\n                -\r\n                ");
             EndContext();
             BeginContext(329, 116, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ff8bde6bbef4538b279486e3518b1ed", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d3c4ae671f7b48f5a8f742b6ee993b84", async() => {
                 BeginContext(397, 44, true);
                 WriteLiteral("\r\n                    Edit\r\n                ");
                 EndContext();
@@ -147,7 +147,7 @@ using KoolVeganBlog.ViewModels;
             WriteLiteral("\r\n                -\r\n                ");
             EndContext();
             BeginContext(482, 120, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5e2ab90bd6344cf691a318be8b77e6d0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af076b49abea4ee2be1dc70bf8979c2f", async() => {
                 BeginContext(552, 46, true);
                 WriteLiteral("\r\n                    Remove\r\n                ");
                 EndContext();
